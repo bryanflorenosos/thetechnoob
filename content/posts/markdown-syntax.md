@@ -17,13 +17,6 @@ aliases = ["migrate-from-jekyl"]
 +++
 
 
-<dl>
-  <dt>Definition list</dt>
-  <dd>Is something people use sometimes.</dd>
-
-  <dt>Markdown in HTML</dt>
-  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
-</dl>
 
 This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
 <!--more-->
