@@ -49,7 +49,45 @@ Just like a typical firewall interzone traffic is denied by default, unless spec
 *The **inspect** command will inspect traffic in layer 4 and 7*  
 `class-map type inspect match-any public-IP`  
  `match access-group name public-IP`  
+ 
+`class-map type inspect match-any GuestWeb`  
+ `match protocol http`  
+ `match protocol https`  
+ `match protocol dns`   
+ `match protocol icmp`  
 
+`ip access-list extended self_to_INTERNET`  
+`permit icmp any any`  
+ `permit udp any any eq domain`  
 
+`class-map type inspect match-any self_to_INTERNET`  
+ `match access-group name self_to_INTERNET`  
+
+`class-map type inspect match-any CORPORATE_to_INTERNET`  
+ `match protocol icmp`  
+ `match protocol dns`  
+
+`ip access-list extended allowipsec`  
+ `permit esp any any`  
+ `permit udp any any eq isakmp`  
+ `permit udp any any eq non500-isakmp`  
+ `permit udp any eq isakmp any`  
+ `permit udp any eq non500-isakmp any`  
+
+`class-map type inspect match-any INTERNET_to_self_ipsec`  
+ `match access-group name allowipsec`  
+
+`object-group network proxy`  
+ `165.225.98.0 255.255.255.0`  
+ `165.225.226.0 255.255.254.0`  
+`ip access-list extended allow-prioxy`  
+ `permit tcp any object-group proxy eq 443`  
+ `permit tcp any object-group proxy eq www`  
+ `permit icmp any object-group proxy`  
+
+`class-map type inspect match-any proxyserver`  
+ `match access-group name allow-proxy`  
+
+###### Specify the action in a Policy Map for Zone-based Firewall.
 
 
