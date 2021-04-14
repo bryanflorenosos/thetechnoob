@@ -40,7 +40,16 @@ Basically a Zone Based Firewall configuration allows you to make a router act as
 
 * A. Classify the traffic using a special Class-map for Zone-based Firewalls, integrate Access-list configuration
   * class-map type inspect match-any microsoftO365
-   match access-group name microsoftO365
+   match access-group name microsoftO365  
+
+   class-map type inspect match-any GuestWeb_Protocols  
+    match protocol http
+    match protocol https
+    match protocol dns
+    match protocol ftp
+    match protocol icmp
+    match protocol isakmp
+
 
 
   
