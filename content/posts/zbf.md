@@ -17,8 +17,18 @@ Just like a typical firewall interzone traffic is denied by default, unless spec
 
 ###### Create the Zones
 
-`zone security CORPORATE`
-`zone security INTERNET`
-`zone security GUST`
+* `zone security CORPORATE`
+* `zone security INTERNET`
+* `zone security GUEST`
 
 ###### Assign the Interfaces to Zones
+
+`interface Tunnel1`   
+`zone-member security CORPORATE`  
+
+`interface Cellular0/2/0`  
+ `zone-member security INTERNET`  
+
+`interface Vlan50`  
+ `description GUEST-WIFI`  
+`zone-member security GUEST`  
