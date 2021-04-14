@@ -8,20 +8,20 @@ tags = [
     "Zone Based Firewall",
 ]
 categories = [
-    "themes",
     "syntax",
+    "configuration",
 ]
 
 +++
 
-## What is Zone Based Firewall ?
+### What is Zone Based Firewall ?
 
 In a much simpler explanation ZBF  allows you to make a router act as a firewall. You will allocate and assigned security zones to different interfaces.
 
 Actually in my opinion you can use this approach if your client or customer has a strict budget requirements and still wants an extra security.
 
 
-## ZBF configuration Syntax.
+### ZBF configuration Syntax.
 
 1. Create the Zones
 
@@ -29,3 +29,14 @@ Actually in my opinion you can use this approach if your client or customer has 
 * zone security INTERNET
 * zone security GUEST
 
+2. Assign the Interfaces to Zones
+
+interface Tunnel1
+zone-member security CORPORATE
+
+interface Gi1
+ zone-member security INTERNET
+
+interface Vlan50
+ description GUEST-WIFI
+zone-member security GUEST
