@@ -1,19 +1,18 @@
 +++
-author = "Bryan Florenosos"
-title = "Zone Based Firewall Guide"
-date = "2021-04-14"
-description = "Configuration and Syntax for ZBF"
+author = "Hugo Authors"
+title = "Markdown Syntax Guide"
+date = "2019-03-11"
+description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
 tags = [
-    "zbf",
-    "security",
-    "firewall",
+    "markdown",
+    "css",
+    "html",
 ]
 categories = [
-    "network",
-    "security",
+    "themes",
     "syntax",
 ]
-series = ["Tech Guide"]
+series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
 +++
 
