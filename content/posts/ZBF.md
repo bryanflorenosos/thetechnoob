@@ -22,9 +22,9 @@ Actually in my opinion you can use this approach if your client or customer has 
 
 #### Create the Zones
 
-* zone security CORPORATE
-* zone security INTERNET
-* zone security GUEST
+zone security CORPORATE  
+zone security INTERNET  
+zone security GUEST  
 
 #### Assign the Interfaces to Zones
 
