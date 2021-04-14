@@ -32,11 +32,15 @@ Actually in my opinion you can use this approach if your client or customer has 
 2. Assign the Interfaces to Zones
 
 interface Tunnel1
+
 zone-member security CORPORATE
 
 interface Gi1
+
  zone-member security INTERNET
 
 interface Vlan50
+
  description GUEST-WIFI
+
 zone-member security GUEST
