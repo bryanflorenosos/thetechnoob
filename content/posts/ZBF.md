@@ -1,17 +1,20 @@
 +++
 author = "Bryan Florenosos"
-title = "Zone Based Configuration Guide"
+title = "Zone Based Firewall"
 date = "2021-04-14"
-description = "ZBF Syntax"
+description = "ZBF Syntax Guide"
 tags = [
-    "ZBF",
-    "Zone Based Firewall",
+    "markdown",
+    "css",
+    "html",
 ]
 categories = [
+    "ZBF",
+    "security"
     "syntax",
-    "configuration",
 ]
-
+series = ["Themes Guide"]
+aliases = ["migrate-from-jekyl"]
 +++
 
 ### What is Zone Based Firewall ?
