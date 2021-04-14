@@ -38,7 +38,7 @@ interface Tunnel1
  zone-member security CORPORATE
 
 interface Gi1
- zone-member security INTERNET
+zone-member security INTERNET
  
 interface Vlan50
  description GUEST-WIFI
