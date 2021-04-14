@@ -36,7 +36,7 @@ Basically a Zone Based Firewall configuration allows you to make a router act as
     description GUEST-WIFI  
     zone-member security GUEST  
 
-* Configure Zone-Pair Policies to define the traffic that should be allowed thru the Zone-based Firewall. Zone-pair policies are between a pair of zones. It is directional. Each initiating Zone require a separate policy.
+###### Configure Zone-Pair Policies to define the traffic that should be allowed thru the Zone-based Firewall. Zone-pair policies are between a pair of zones. It is directional. Each initiating Zone require a separate policy.
 
 * A. Classify the traffic using a special Class-map for Zone-based Firewalls, integrate Access-list configuration
   * class-map type inspect match-any microsoftO365
