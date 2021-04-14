@@ -32,14 +32,11 @@ Actually in my opinion you can use this approach if your client or customer has 
 ## Assign the Interfaces to Zones
 
 interface Tunnel1
-<ul style="list-style-type:none;">
-<li>Test</li>
-<li>Test2</li>
- zone-member security CORPORATE
+zone-member security CORPORATE
 
 interface Gi1
 zone-member security INTERNET
  
 interface Vlan50
- description GUEST-WIFI
- zone-member security GUEST
+description GUEST-WIFI
+zone-member security GUEST
