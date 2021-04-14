@@ -4,16 +4,14 @@ title = "Zone Based Configuration Guide"
 date = "2021-04-14"
 description = "ZBF Syntax"
 tags = [
-    "markdown",
-    "css",
-    "html",
+    "ZBF",
+    "Zone Based Firewall",
 ]
 categories = [
     "themes",
     "syntax",
 ]
-series = ["Themes Guide"]
-aliases = ["migrate-from-jekyl"]
+
 +++
 
 ## What is Zone Based Firewall ?
