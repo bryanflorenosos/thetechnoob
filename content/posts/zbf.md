@@ -17,3 +17,5 @@ aliases = ["migrate-from-jekyl"]
 
 Allows a router to act as a stateful firewall, where we define and allocate security zones.
 Just like a typical firewall interzone traffic is denied by default, unless specified by a rule/policy and Intrazone traffic is allowed by default.
+
+{{< figure src="/media/zbf.jpg" title="Topology" >}}
