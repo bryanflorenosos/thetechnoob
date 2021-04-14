@@ -31,7 +31,7 @@ Actually in my opinion you can use this approach if your client or customer has 
 
 #### Assign the Interfaces to Zones
 
-{{< typography font="font-family" size="36px" weight="bold" >}}
+{{< typography font="monoton" size="36px" weight="bold" >}}
 interface Tunnel1  
 zone-member security CORPORATE
 {{< /typography >%}}
