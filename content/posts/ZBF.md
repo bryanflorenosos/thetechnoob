@@ -1,9 +1,19 @@
 +++
-title = "Zone Based Firewall Configuration Syntax"
-description = "ZBF Configuration"
-date = "2021-04-14"
-aliases = ["ZBF", "zone-based"]
 author = "Bryan Florenosos"
+title = "Zone Based Configuration Guide"
+date = "2021-04-14"
+description = "ZBF Syntax"
+tags = [
+    "markdown",
+    "css",
+    "html",
+]
+categories = [
+    "themes",
+    "syntax",
+]
+series = ["Themes Guide"]
+aliases = ["migrate-from-jekyl"]
 +++
 
 ## What is Zone Based Firewall ?
@@ -16,8 +26,9 @@ Actually in my opinion you can use this approach if your client or customer has 
 ## ZBF configuration Syntax.
 
 1. Create the Zones
-# Paragraph
+
 zone security CORPORATE
+
 zone security INTERNET
 zone security GUEST
 
