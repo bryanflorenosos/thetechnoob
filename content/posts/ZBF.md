@@ -20,12 +20,6 @@ Actually in my opinion you can use this approach if your client or customer has 
 
 ### ZBF configuration Syntax.
 
-#### Create the Zones
-
-...zone security CORPORATE  
-...zone security INTERNET..
-zone security GUEST  
-
 #### Assign the Interfaces to Zones
 
 interface Tunnel1  
@@ -38,7 +32,3 @@ zone-member security INTERNET
 interface Vlan50  
 description GUEST-WIFI  
 zone-member security GUEST
-
-...t1
-...t2
-t3
