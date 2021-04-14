@@ -37,6 +37,6 @@ zone-member security CORPORATE
 interface Gi1
 zone-member security INTERNET
  
-interface Vlan50
-description GUEST-WIFI
+interface Vlan50  
+description GUEST-WIFI  
 zone-member security GUEST
