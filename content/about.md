@@ -16,3 +16,10 @@ I'm just a simple network engineer that's still trying to learn the ins and outs
 
 During my free time oh I forgot I rarely have one LOL!
 
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
