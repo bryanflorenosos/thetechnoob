@@ -38,3 +38,7 @@ zone-member security INTERNET
 interface Vlan50  
 description GUEST-WIFI  
 zone-member security GUEST
+
+...t1
+...t2
+t3
