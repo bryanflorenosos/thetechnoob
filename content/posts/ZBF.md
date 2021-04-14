@@ -3,17 +3,11 @@ author = "Bryan Florenosos"
 title = "Zone Based Firewall"
 date = "2021-04-14"
 description = "ZBF Syntax Guide"
-tags = [
-    "markdown",
-    "css",
-    "html",
-]
 categories = [
-    "ZBF",
-    "security"
+        "security"
     "syntax",
 ]
-series = ["Themes Guide"]
+series = ["Technical Notes"]
 aliases = ["migrate-from-jekyl"]
 +++
 
@@ -34,10 +28,9 @@ Actually in my opinion you can use this approach if your client or customer has 
 
 #### Assign the Interfaces to Zones
 
-{{< typography font="monoton" size="36px" weight="bold" >}}
 interface Tunnel1  
 zone-member security CORPORATE
-{{< /typography >%}}
+
 
 interface Gi1  
 zone-member security INTERNET
