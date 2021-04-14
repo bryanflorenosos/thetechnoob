@@ -46,11 +46,10 @@ Just like a typical firewall interzone traffic is denied by default, unless spec
  `permit tcp any object-group googleDNS eq 443`  
  `permit icmp any object-group googleDNS`  
 
-
-
-*The **inspect** command will inspect traffic in layer 4 and 7*
+*The **inspect** command will inspect traffic in layer 4 and 7*  
 `class-map type inspect match-any public-IP`  
  `match access-group name public-IP`  
+
 
 
 
