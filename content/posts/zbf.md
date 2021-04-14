@@ -26,7 +26,7 @@ Just like a typical firewall interzone traffic is denied by default, unless spec
 `interface Tunnel1`   
 `zone-member security CORPORATE`  
 
-`interface Cellular0/2/0`  
+`interface Gi1`  
  `zone-member security INTERNET`  
 
 `interface Vlan50`  
