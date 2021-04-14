@@ -35,4 +35,8 @@ Just like a typical firewall interzone traffic is denied by default, unless spec
 
 *Configure Zone-Pair Policies to define the traffic that should be allowed thru the Zone-based Firewall. Zone-pair policies are between a pair of zones. It is directional. Each initiating Zone require a separate policy.*
 
+###### Classify the traffic using a special Class-map for Zone-based Firewalls.
+
+
+
 
