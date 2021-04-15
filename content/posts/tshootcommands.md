@@ -109,15 +109,14 @@ R(config-cp-host)#service-policy type port-filter input FILTER_TCP_23
     `privilege exec level 7 show config`  
 
 ###### Cisco Switch Lights Meaning
-"SYSTEM(SYST) Light  
+*SYSTEM(SYST) Light*    
 Overall status of the switch.  
 **Off:** Switch is not powered on  
 **Green:** Switch is working fine  
 **Amber:** Switch is powered on but faulty  
 
 ###### REDUNDANT POWER SUPPLY(RPS) Light
-Provides backup power to the switch if the main supply goes off.  
-
+*Provides backup power to the switch if the main supply goes off.*    
 **Off:** No RPS available,  
 **Green:** RPS is working fine  
 **Blinking Green:** Providing backup to some other device  
@@ -125,15 +124,13 @@ Provides backup power to the switch if the main supply goes off.
 **Flashing Amber:** RPS is providing backup(primary power off)  
 
 ###### SPEED
-Speed status of the switch ports.  
-
+*Speed status of the switch ports.*  
 **Off:** Switch port is operating at 10Mbps  
 **Green:** Switch port is operating at 100Mbps  
 **Flashing green:** Switch port is operating at 1000Mbps  
 
 ###### STATUS
-Status of the switch ports.  
-
+*Status of the switch ports.*  
 **Off:** No device connected/port is administratively down.    
 **Green:** Device is connected.  
 **Blinking green:** Port is sending/receiving data.  
