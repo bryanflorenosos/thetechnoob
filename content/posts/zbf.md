@@ -13,6 +13,8 @@ tags = [
 Allows a router to act as a stateful firewall, where we define and allocate security zones.
 Just like a typical firewall interzone traffic is denied by default, unless specified by a rule/policy and Intrazone traffic is allowed by default.
 
+**Note:** *The zone-based firewall feature requires a security license.*
+
 {{< figure src="/images/zbf.jpg" title="Topology" >}}
 
 ###### Create the Zones
