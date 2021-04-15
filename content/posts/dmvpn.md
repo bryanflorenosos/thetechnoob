@@ -19,5 +19,5 @@ Basically a vrf is a separate routing table from your global routing table. The 
 {{< figure src="/images/dmvpn.jpg" >}}
 
 
-
+{{< bokya src="img/fvrf.jpg" alt="Bad Lighthouse Performance" >}}
 
