@@ -100,7 +100,7 @@ R(config-cp-host)#service-policy type port-filter input FILTER_TCP_23
     `aaa authorization exec default local`   
     `aaa authorization console`
 
-**B**
+**B**  
     `aaa new-model`  
     `aaa authentication login default local`  
     `aaa authorization exec default local`  
