@@ -82,7 +82,7 @@ R(config-cp-host)#service-policy type port-filter input FILTER_TCP_23
 5. When you are prompted to enter the initial configuration, type No, and press Enter.
 6. At the *Router>* prompt, type **`enable`**
 7. At the *Router#* prompt, enter the **`configure memory`** command, and press Enter in order to copy the startup configuration to the running configuration.
-8. Use the **config t** command in order to enter global configuration mode.
+8. Use the **`config t`** command in order to enter global configuration mode.
 9. Use this command in order to create a new user name and password:  
     * `router(config)#username test privilege 15 password test`  
 10. Use this command in order to change the boot statement: 
