@@ -58,8 +58,9 @@ ip ssh source-interface (interface to use)
 ip telnet source-interface (interface to use)  
 telnet 104.68.10.120 www /source-interface GigabitEthernet1  
 
-###### Display Cisco IOS Device Opened Ports
-R#show control-plane host open-ports {{< figure src="/images/open-ports.jpg" >}}
+###### Display Cisco IOS Device Opened Ports  
+R#show control-plane host open-ports 
+{{< figure src="/images/open-ports.jpg" >}}
 
 
 
