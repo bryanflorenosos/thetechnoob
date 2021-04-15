@@ -53,9 +53,9 @@ logging monitor 7
 `debug crypto ikev2 protocol 255`  
 `debug crypto ikev2 platform 255`  
 
-#####Set SSH/Telnet/Ping/Traceroute with a source ip or interface
-ip ssh source-interface <interface to use>  
-ip telnet source-interface <interface to use>  
+##### Set SSH/Telnet/Ping/Traceroute with a source ip or interface  
+ip ssh source-interface (interface to use)  
+ip telnet source-interface (interface to use)  
 
 
 
