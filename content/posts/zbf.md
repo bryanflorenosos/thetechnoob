@@ -78,7 +78,7 @@ Just like a typical firewall interzone traffic is denied by default, unless spec
 `object-group network proxy`  
  `165.225.98.0 255.255.255.0`  
  `165.225.226.0 255.255.254.0`  
-`ip access-list extended allow-prioxy`  
+`ip access-list extended allow-proxy`  
  `permit tcp any object-group proxy eq 443`  
  `permit tcp any object-group proxy eq www`  
  `permit icmp any object-group proxy`  
