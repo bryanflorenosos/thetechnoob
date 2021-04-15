@@ -22,7 +22,7 @@ tags = [
 `show tcp brief`  
 
 2. Archive Command  
-show archive config differences    
+show archive config differences  
 show archive log config all  
 show archive  
 
