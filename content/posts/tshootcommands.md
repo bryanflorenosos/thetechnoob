@@ -12,7 +12,7 @@ tags = [
 `Ping`  
 `Traceroute`  
 `Telnet`  
-`Show interfaces (show interfaces GigabitEthernet 3/6)`  `
+`Show interfaces (show interfaces GigabitEthernet 3/6)`  
 `Show ip interface`  
 `Show ip route`  
 `Show running-config`  
@@ -20,3 +20,11 @@ tags = [
 `show ip sockets`  
 `show conn`  
 `show tcp brief`  
+
+2. Archive Command
+show archive config differences   
+show archive log config all  
+show archive  
+
+
+
