@@ -16,7 +16,8 @@ tags = [
 In my experience FVRF or front door vrf is where you place your public facing physical interface or an interface facing your L3VPN inside a VRF. I mainly encounter this setup in DMVPN environments. I will be sharing in this article on how we setup a hub and spoke dmvpn using fvrf.  
 
 Basically a vrf is a separate routing table from your global routing table. The tunnel interface will not be put inside a vrf but instead it should only be aware on where to forward the traffic correctly (vrf aware vpn).  
-{{< figure title="Topology" src="/images/dmvpn.jpg"  >}}
+{{- $image := resources.Get "images/dmvpn.jpg" -}}
+{{ $image := $resource.Resize "x400" }}
 
 
 
