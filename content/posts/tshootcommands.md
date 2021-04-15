@@ -59,18 +59,7 @@ ip telnet source-interface (interface to use)
 telnet 104.68.10.120 www /source-interface GigabitEthernet1  
 
 ###### Display Cisco IOS Device Opened Ports
-R#show control-plane host open-ports
-Active internet connections (servers and established)  
-
-| Prot  |            Local Address             Foreign Address                  Service    State
-|  tcp  |                   *:22                         *:0               SSH-Server   LISTEN
-| ----- |
-|  tcp  |                      *:23                         *:0                   Telnet   LISTEN
-|  udp  |                     *:161                         *:0                  IP SNMP   LISTEN
-|  udp  |                     *:162                         *:0                  IP SNMP   LISTEN
-|  udp  |                  *:65110                         *:0                  IP SNMP   LISTEN
-|  udp  |                   *:1975                         *:0                      IPC   LISTEN
-
+R#show control-plane host open-ports {{< figure src="/images/zbf.jpg" >}}
 
 
 
