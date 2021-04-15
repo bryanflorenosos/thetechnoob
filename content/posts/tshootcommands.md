@@ -8,7 +8,7 @@ tags = [
 ]
 +++
 
-1. Basic Troubleshooting Commands
+1. Basic Troubleshooting Commands  
 `Ping`  
 `Traceroute`  
 `Telnet`  
@@ -42,5 +42,23 @@ ip ssh time-out 60
 ip ssh version 2  
 line vty 0 15  
 transport input ssh  
+
+###### Debug commands at Cisco ASA  
+terminal monitor  
+logging buffer-size 1048576  
+logging buffered 7  
+logging monitor 7  
+`debug crypto condition peer 45.250.160.114`  
+`debug crypto ipsec 255`  
+`debug crypto ikev2 protocol 255`  
+`debug crypto ikev2 platform 255`  
+
+#####Set SSH/Telnet/Ping/Traceroute with a source ip or interface
+ip ssh source-interface <interface to use>  
+ip telnet source-interface <interface to use>  
+
+
+
+
 
 
