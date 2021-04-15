@@ -62,7 +62,7 @@ telnet 104.68.10.120 www /source-interface GigabitEthernet1
 R#`show control-plane host open-ports`
 {{< figure src="/images/open-ports.jpg" >}}  
 
-* Solution to close the listening to port 23 (telnet)
+* Solution to close the listening to port 23 (telnet)  
 R#conf t  
 Enter configuration commands, one per line.  End with CNTL/Z.  
 R(config)#class-map type port-filter match-any TCP_23  
