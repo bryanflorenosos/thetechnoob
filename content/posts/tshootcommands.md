@@ -26,5 +26,21 @@ show archive config differences   
 show archive log config all  
 show archive  
 
+###### Basic Commands to Enable Telnet/SSH on Cisco Devices
+a. **Telnet Access**
+no aaa new-model  
+username test privilege 15 secret test  
+line vty 0 15  
+login local  
+no password  
+transport input telnet  
+
+b. **SSH Access:**
+ip domain-name test.com  
+crypto key generate rsa general-usage modulus 2048  
+ip ssh time-out 60  
+ip ssh version 2  
+line vty 0 15  
+transport input ssh  
 
 
