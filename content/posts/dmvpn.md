@@ -17,7 +17,8 @@ In my experience FVRF or front door vrf is where you place your public facing ph
 
 Basically a vrf is a separate routing table from your global routing table. The tunnel interface will not be put inside a vrf but instead it should only be aware on where to forward the traffic correctly (vrf aware vpn).  
 {{< figure src="/images/dmvpn.jpg" >}}
-{{ $image := $image.Resize "x300" }}
+
+{{< imgresize path="images/dmvpn.jpg" >}}
 
 
 
