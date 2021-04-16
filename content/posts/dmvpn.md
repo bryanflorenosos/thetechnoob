@@ -23,7 +23,7 @@ The cloud router simulates the Internet the configuration only involves putting 
 
 ###### _HUB_ config:
 
-* **Configure and define the VRF and assign the physical interface that faces the ISP and creating a default route to the internet**
+**Configure and define the VRF and assign the physical interface that faces the ISP and creating a default route to the internet**  
 `vrf definition wan`  
 `!`  
  `address-family ipv4`  
@@ -263,3 +263,6 @@ The cloud router simulates the Internet the configuration only involves putting 
   `eigrp router-id 10.10.15.2`  
  `exit-address-family`  
 !  
+
+###### _SPOKE3_ Configuration:
+
