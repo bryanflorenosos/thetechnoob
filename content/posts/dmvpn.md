@@ -30,7 +30,7 @@ The cloud router simulates the Internet the configuration only involves putting 
  `exit-address-family`  
 `!`  
 `interface GigabitEthernet1`  
- `vrf forwarding wan`
+ `vrf forwarding wan`  
  `ip address 200.138.55.2 255.255.255.252`  
  `negotiation auto`  
 `!`  
