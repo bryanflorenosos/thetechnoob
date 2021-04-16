@@ -18,6 +18,13 @@ In my experience FVRF or front door vrf is where you place your public facing ph
 Basically a vrf is a separate routing table from your global routing table. The tunnel interface will not be put inside a vrf but instead it should only be aware on where to forward the traffic correctly (vrf aware vpn).  
 {{< bokya src="img/fvrf.jpg" alt="Bad Lighthouse Performance" >}}
 
+**Key Notes for NHRP**
+* NHRP is used to provide IP mapping between WAN IP address and Tunnel IP address.
+* Best practice is to allocate a static Public IP on your HUB!
+* The Hub is the NHRP Server (NHS) while the Spoke sites are the NHRP Clients.
+* The clients (Spoke sites) query the NHS router (Hub site) to obtain the physical WAN public IP of other Spoke routers.
+* As long as this Spoke router will register its current public IP with the NHS server, all the other Spoke sites will find it and will be able to establish VPN with the dynamic IP site. This functionality is facilitated by NHRP.
+
 ###### Configuration of the Cloud Router  
 The cloud router simulates the Internet the configuration only involves putting in the Public IP address nothing fancy.
 
@@ -55,7 +62,9 @@ The cloud router simulates the Internet the configuration only involves putting 
  `ip address 10.0.0.1 255.255.255.0`  
  `no ip redirects`  
  `ip mtu 1400`  
+ !*enables forwarding of multicast traffic across the tunnel*  
  `ip nhrp map multicast dynamic`   
+ !*Identifies the DMVPN cloud. All routers must havethe same network ID.*  
  `ip nhrp network-id 100`  
  `ip nhrp redirect`  
  `ip tcp adjust-mss 1360`  
@@ -64,6 +73,7 @@ The cloud router simulates the Internet the configuration only involves putting 
  `cdp enable`  
  `tunnel source GigabitEthernet1`  
  `tunnel mode gre multipoint`  
+ !*OPTIONAL. Needed only on older IOS versions such as 12.3*  
  `tunnel key 100`  
  `tunnel vrf wan`  
 !  
@@ -177,6 +187,22 @@ The cloud router simulates the Internet the configuration only involves putting 
 !  
 `ip route vrf wan 0.0.0.0 0.0.0.0 198.162.80.1`  
 !  
+`interface Tunnel100`    
+ `ip address 10.0.0.2 255.255.255.0`  
+ `no ip redirects`  
+ `ip mtu 1400`    
+ `ip nhrp network-id 100`  
+ !*Map the NHS address*  
+ `ip nhrp nhs 10.0.0.1 nbma 200.138.55.2 multicast`  
+ `ip nhrp redirect`  
+ `ip tcp adjust-mss 1360`  
+ `load-interval 30`  
+ `cdp enable`  
+ `tunnel source GigabitEthernet1`  
+ `tunnel mode gre multipoint`  
+ `tunnel key 100`  
+ `tunnel vrf wan`  
+!  
 `interface GigabitEthernet2`  
  `no ip address`  
  `negotiation auto`  
@@ -264,5 +290,5 @@ The cloud router simulates the Internet the configuration only involves putting 
  `exit-address-family`  
 !  
 
-###### _SPOKE3_ Configuration:
+###### _SPOKE2_ Configuration:
 
