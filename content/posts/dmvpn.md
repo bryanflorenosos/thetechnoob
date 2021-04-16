@@ -44,8 +44,8 @@ The cloud router simulates the Internet the configuration only involves putting 
  `negotiation auto`  
 !  
 `interface GigabitEthernet2.200` 
- `description Interconnect` 
- `encapsulation dot1Q 200`  
+ `description Interconnect`  
+ `encapsulation dot1Q 200`   
  `ip address 10.10.11.1 255.255.255.252`  
 !  
 
