@@ -38,7 +38,7 @@ The cloud router simulates the Internet the configuration only involves putting 
 
 ###### Configure the interconnection from the WAN Router going to the Coreswitch (allocate a sub interface)
 
-`interface GigabitEthernet2`
+`interface GigabitEthernet2`  
  `description To Coreswitch g0/0`  
  `no ip address`
  `negotiation auto`  
