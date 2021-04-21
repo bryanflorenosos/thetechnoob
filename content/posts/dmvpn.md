@@ -292,3 +292,70 @@ The cloud router simulates the Internet the configuration only involves putting 
 
 ###### _SPOKE2_ Configuration:
 
+`hostname SPOKE2`  
+!  
+!  
+`vrf definition wan`  
+ !  
+ `address-family ipv4`  
+ `exit-address-family`  
+!  
+`interface Tunnel100`  
+ `ip address 10.0.0.3 255.255.255.0`  
+ `no ip redirects`  
+ `ip mtu 1400`  
+ `ip nhrp network-id 100`  
+ `ip nhrp nhs 10.0.0.1 nbma 200.138.55.2 multicast`  
+ `ip nhrp redirect`  
+ `ip tcp adjust-mss 1360`  
+ `load-interval 30`  
+ `if-state nhrp`  
+ `cdp enable`  
+ `tunnel source GigabitEthernet1`  
+ `tunnel mode gre multipoint`  
+ `tunnel key 100`  
+ `tunnel vrf wan`  
+!  
+`interface GigabitEthernet1`  
+ `vrf forwarding wan`  
+ `ip address 199.189.120.2 255.255.255.252`  
+ `negotiation auto`  
+!  
+`ip route vrf wan 0.0.0.0 0.0.0.0 199.189.120.1`  
+!  
+`interface GigabitEthernet2`  
+ `no ip address`  
+ `negotiation auto`  
+!  
+`interface GigabitEthernet2.100`  
+ `description Interconnect`  
+ `encapsulation dot1Q 100`  
+ `ip address 10.10.19.1 255.255.255.252`  
+!  
+`router eigrp bangan`  
+ !  
+ `address-family ipv4 unicast autonomous-system 123`  
+  !  
+  `af-interface default`   
+   `passive-interface`  
+  `exit-af-interface`  
+  !  
+  `af-interface Tunnel100`  
+   `no passive-interface`  
+  `exit-af-interface`  
+  !  
+  `af-interface GigabitEthernet2`  
+   `no passive-interface`  
+  `exit-af-interface`  
+  !  
+  `af-interface GigabitEthernet2.100`  
+   `no passive-interface`  
+  `exit-af-interface`  
+  !  
+  `topology base`  
+  `exit-af-topology`  
+  `network 10.0.0.3 0.0.0.0`  
+  `network 10.10.19.1 0.0.0.0`  
+  `eigrp router-id 10.0.0.3`  
+ `exit-address-family`  
+!  
