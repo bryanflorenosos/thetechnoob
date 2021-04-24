@@ -14,8 +14,8 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 **Network Topology**  
 
 {{< bokya src="img/l2ltopology.jpg" >}}    
-**R1** = right router  
-**R2** = left router  
+**R1** = right router  *public ip is 129.30.19.2*  
+**R2** = left router   *public ip is 139.30.20.2*  
 
 ## R1
 **1.** Phase I - ISAKMP Parameters  
