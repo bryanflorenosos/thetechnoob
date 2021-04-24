@@ -84,7 +84,7 @@ Verification Commands:
 Sample output from R1:  
 {{< bokya src="img/l2lR1_1.jpg" >}}  
 **The following mode is found in IKE Quick Mode, phase 2**  
-* **QM_IDLE** – The ISAKMP SA is idle and authenticated  
+**QM_IDLE** – The ISAKMP SA is idle and authenticated  
   
 For further Notes the show crypto isamp sa command allows us to check the status of our negotiations  
 **The following four modes are found in IKE main mode:**  
