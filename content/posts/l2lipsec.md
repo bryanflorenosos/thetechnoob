@@ -71,5 +71,9 @@ Regardless of parameters selected within IKEv1 transform sets, the following pie
 >* IPSec SA Lifetime (seconds or kilobytes)
 >* IPSec Mode of Operation (Transport or Tunnel).
 
- 
+**Transform Sets** 
+A transform set is a combination of individual IPSec transforms designed to enact a specific security policy for traffic. During the ISAKMP IPSec security association negotiation that occurs in IKE phase 2 quick mode, the peers agree to use a particular transform set for protecting a particular data flow. Transform sets combine the following IPSec factors:  
+a. Mechanism for payload authentication—AH transform  
+b.  Mechanism for payload encryption—ESP transform  
+c.  IPSec mode (transport versus tunnel)  
 
