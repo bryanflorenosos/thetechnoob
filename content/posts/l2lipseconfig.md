@@ -17,6 +17,32 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 **R1** = right router  
 **R2** = left router  
 
-
+## R1
+**1.** Phase I - ISAKMP Parameters  
+  
+`crypto isakmp policy 5`  
+ `authentication pre-share`  
+ `encryption aes 256`  
+ `hash sha-256`  
+ `group 14`  
+!  
+`crypto isakmp key cisco123 address 139.30.20.2`  
+  
+**2.** Phase II - ESP Parameters  
+  
+`crypto ipsec transform-set TSET esp-aes 256 esp-sha-hmac`  
+  
+**3.** Interesting Traffic - Crypto ACL  
+`access-list 101 permit ip 10.10.1.0 0.0.0.255 172.168.1.0 0.0.0.255`  
+  
+**4.** Link the above parameters to each other. This is done by using a Crypto Map Component  
+`crypto map CMAP 10 ipsec-isakmp`  
+ `match address 101`  
+ `set peer 139.30.20.2`  
+ `set transform-set TSET`  
+   
+**5.** Apply the Crypto Map on the outgoing Interface  
+`Interface Gi0/0`   
+ `crypto map CMAP`   
 
 
