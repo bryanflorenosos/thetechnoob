@@ -88,10 +88,10 @@ Sample output from R1:
   
 For further Notes the show crypto isamp sa command allows us to check the status of our negotiations  
 **The following four modes are found in IKE main mode:**  
-a. **MM_NO_STATE*** – ISAKMP SA process has started but has not continued to form (typically due to a connectivity issue with the peer)  
-b. **MM_SA_SETUP*** – Both peers agree on ISAKMP SA parameters and will move along the process.  
-c. **MM_KEY_EXCH*** – Both peers exchange their DH keys and are generating their secret keys. (This state could also mean there is a mis-matched authentication type or PSK, if it does not proceed to the next step)    
-d. **MM_KEY_AUTH*** – ISAKMP SA’s have been authenticated in main mode and will proceed to QM_IDLE immediately.  
+a. **MM_NO_STATE** – ISAKMP SA process has started but has not continued to form (typically due to a connectivity issue with the peer)  
+b. **MM_SA_SETUP** – Both peers agree on ISAKMP SA parameters and will move along the process.  
+c. **MM_KEY_EXCH** – Both peers exchange their DH keys and are generating their secret keys. (This state could also mean there is a mis-matched authentication type or PSK, if it does not proceed to the next step)    
+d. **MM_KEY_AUTH** – ISAKMP SA’s have been authenticated in main mode and will proceed to QM_IDLE immediately.  
   
 **The following three modes are found in IKE aggressive mode:**  
 a. **AG_NO_STATE** – ISAKMP SA process has started but has not continued to form (typically do to a connectivity issue with the peer)  
