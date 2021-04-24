@@ -79,13 +79,38 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 Verification Commands:  
 `Phase I - Show crypto isakmp sa`  
 `Phase II - Show crypto ipsec sa`  
+`show crypto session`  
   
 Sample output from R1:  
 {{< bokya src="img/l2lR1_1.jpg" >}}  
-
-Data Packets are now traversing the link securely via IPSec as shown by below out, they are being encrypted and decrypted.  
-{{< bokya src="img/l2lR1_2.jpg" >}}  
-
+**The following mode is found in IKE Quick Mode, phase 2**  
+* **QM_IDLE** – The ISAKMP SA is idle and authenticated  
+  
 For further Notes the show crypto isamp sa command allows us to check the status of our negotiations  
 **The following four modes are found in IKE main mode:**  
-a. **MM_NO_STATE*** – ISAKMP SA process has started but has not continued to form (typically due to a connectivity issue with the peer)
+a. **MM_NO_STATE*** – ISAKMP SA process has started but has not continued to form (typically due to a connectivity issue with the peer)  
+b. **MM_SA_SETUP*** – Both peers agree on ISAKMP SA parameters and will move along the process.  
+c. **MM_KEY_EXCH*** – Both peers exchange their DH keys and are generating their secret keys. (This state could also mean there is a mis-matched authentication type or PSK, if it does not proceed to the next step)    
+d. **MM_KEY_AUTH*** – ISAKMP SA’s have been authenticated in main mode and will proceed to QM_IDLE immediately.  
+  
+**The following three modes are found in IKE aggressive mode:**  
+a. **AG_NO_STATE** – ISAKMP SA process has started but has not continued to form (typically do to a connectivity issue with the peer)  
+b. **AG_INIT_EXCH** – Peers have exchanged their first set of packets in aggressive mode, but have not authenticated yet.  
+c. **AG_AUTH** – ISAKMP SA’s have been authenticated in aggressive mode and will proceed to QM_IDLE immediately.  
+    
+Data Packets are now traversing the link securely via IPSec as shown by below out, they are being encrypted and decrypted. The #pkts encaps/encrypt/decap/decrypt, these numbers tell us how many packets have actually traversed the IPSec tunnel.   
+{{< bokya src="img/l2lR1_2.jpg" >}}  
+  
+The crypto session will give us a list of all IKE and IPSec SA Sessions  
+{{< bokya src="img/l2lshcryptosession.jpg" >}}  
+Some of the common session statuses are as follows:  
+   
+a. **Up-Active** – IPSec SA is up/active and transferring data.  
+b. **Up-IDLE** – IPSsc SA is up, but there is not data going over the tunnel  
+c. **Up-No-IKE** – This occurs when one end of the VPN tunnel terminates the IPSec VPN and the remote end attempts to keep using the original SPI, this can be avoided by issuing crypto isakmp invalid-spi-recovery  
+d. **Down-Negotiating** – The tunnel is down but still negotiating parameters to complete the tunnel.  
+e. **Down** – The VPN tunnel is down.  
+
+
+
+
