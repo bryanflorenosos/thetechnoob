@@ -83,7 +83,7 @@ Verification Commands:
 Sample output from R1:  
 {{< bokya src="img/l2lR1_1.jpg" >}}  
 
-Data Packets are now traversing the link securely via IPSec as shown by below out, they are being encrypted and decrypted.
+Data Packets are now traversing the link securely via IPSec as shown by below out, they are being encrypted and decrypted.  
 {{< bokya src="img/l2lR1_2.jpg" >}}  
 
 For further Notes the show crypto isamp sa command allows us to check the status of our negotiations  
