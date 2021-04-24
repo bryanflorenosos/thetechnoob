@@ -1,6 +1,6 @@
 +++
 author = "Bryan Florenosos"
-title = "DMVPN configuration using Front Door VRF"
+title = "DMVPN configuration using Front Door VRF Part 1 Configuration"
 date = "2021-04-14"
 description = "How to configure dmvpn"
 tags = [
@@ -23,7 +23,16 @@ Basically a vrf is a separate routing table from your global routing table. The 
 * Best practice is to allocate a static Public IP on your HUB!
 * The Hub is the NHRP Server (NHS) while the Spoke sites are the NHRP Clients.
 * The clients (Spoke sites) query the NHS router (Hub site) to obtain the physical WAN public IP of other Spoke routers.
-* As long as this Spoke router will register its current public IP with the NHS server, all the other Spoke sites will find it and will be able to establish VPN with the dynamic IP site. This functionality is facilitated by NHRP.
+* As long as this Spoke router will register its current public IP with the NHS server, all the other Spoke sites will find it and will be able to establish VPN with the dynamic IP site. This functionality is facilitated by NHRP.  
+  
+**DMVPN Phase I**  
+- The Control Plane (Routing Traffic) is all phases is generally setup based on Hub - n - Spoke with the NHS being the Hub.  
+- In Phase II, the Data Plane traffic is forwarded directly between the spokes.  
+- This is accomplished by tweaking the Routing protocol.  
+- You need to configure the NHS NOT to change the Next Hop of the routes that it propagates from Spoke - to - Spoke.  
+- This configuration is done on the NHS.  
+
+
 
 ###### Configuration of the Cloud Router  
 The cloud router simulates the Internet the configuration only involves putting in the Public IP address nothing fancy.
