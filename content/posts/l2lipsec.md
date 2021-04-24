@@ -77,3 +77,6 @@ a. Mechanism for payload authentication—AH transform
 b.  Mechanism for payload encryption—ESP transform  
 c.  IPSec mode (transport versus tunnel)  
 
+**IPSec Tunnel Mode.** Being the default mode set in Cisco devices, tunnel mode protects the entire IP packet from originating device. It means for every original packet, another packet is generated with new IP header and send over the untrusted network to the VPN peer located on other end of logical connection. Tunnel mode is commonly used in case of Site-to-Site VPN where two secure IPSec gateways are connected over public internet using IPSec VPN connection. Tunnel mode is used when original IP packets are source and destination addresses of secure IPSec peers.  
+
+**IPSec Transport Mode.** In transport mode, IPSec VPN secures the data field or payload of originating IP traffic by using encryption, hashing or both. New IPSec headers encapsulate only payload field while the original IP headers remain unchanged. For example, securing the management traffic of router is a perfect example of IPSec VPN implementation using transport mode. From configuration point of view, both tunnel and transport modes are defined in configuration of transform set.  
