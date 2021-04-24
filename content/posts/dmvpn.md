@@ -25,7 +25,7 @@ Basically a vrf is a separate routing table from your global routing table. The 
 * The clients (Spoke sites) query the NHS router (Hub site) to obtain the physical WAN public IP of other Spoke routers.
 * As long as this Spoke router will register its current public IP with the NHS server, all the other Spoke sites will find it and will be able to establish VPN with the dynamic IP site. This functionality is facilitated by NHRP.  
   
-**DMVPN Phase II**    
+**DMVPN Phase I**    
 - The Control Plane (Routing Traffic) is all phases is generally setup based on Hub - n - Spoke with the NHS being the Hub.  
 - In Phase I, the Data Plane traffic is also forwarded in a Hub - n - Spoke manner where the NHS is the Data Plane Hub.  
 - The reason behind it is that the NHS changes the Next Hop address of the LAN Segments to itself before forwarding it from spoke to spoke.  
