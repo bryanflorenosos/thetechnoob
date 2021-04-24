@@ -62,8 +62,14 @@ If both end meet's the same and correct requirements, the Authentication method 
 
 ### Phase 2  (Secure Data Transfer)
 As mentioned before phase 1 is only concerned in the protection of the vpn tunnel session. **Phase 2** actually is where the encryption and protection of data exchange happens. The protocol used during this phase is **ESP** and it is using **protocol 50**.
-Three main things also is required key, encryption and a hash. They key for the second tunnel already happened in the exchange in Phase 1 this **key** is the dynamic *session key*. Basically we only need to define in the configuration syntax the encryption and hasing algorithm during phase 2.  
+Three main things also is required key, encryption and a hash. They key for the second tunnel already happened in the exchange in Phase 1 this **key** is the dynamic *session key*. Basically we only need to define in the configuration syntax the encryption and hasing algorithm during phase 2.    
 
+Regardless of parameters selected within IKEv1 transform sets, the following pieces of information are always sent:
+>* IPSec Encryption Algorithm (Options: DES, 3DES, AES)
+>* IPSec Authentication Algorithm (Options: MD5, SHA-1)
+>* IPSec Protocol (AH or ESP)
+>* IPSec SA Lifetime (seconds or kilobytes)
+>* IPSec Mode of Operation (Transport or Tunnel).
 
  
 
