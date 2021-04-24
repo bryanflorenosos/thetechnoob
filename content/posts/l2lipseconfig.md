@@ -14,6 +14,9 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 **Network Topology**  
 
 {{< bokya src="img/l2ltopology.jpg" >}}    
+**R1** = right router  
+**R2** = left router  
+
 
 
 
