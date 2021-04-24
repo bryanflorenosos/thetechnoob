@@ -98,7 +98,7 @@ a. **AG_NO_STATE** – ISAKMP SA process has started but has not continued to fo
 b. **AG_INIT_EXCH** – Peers have exchanged their first set of packets in aggressive mode, but have not authenticated yet.  
 c. **AG_AUTH** – ISAKMP SA’s have been authenticated in aggressive mode and will proceed to QM_IDLE immediately.  
     
-Data Packets are now traversing the link securely via IPSec as shown by below out, they are being encrypted and decrypted. The #pkts encaps/encrypt/decap/decrypt, these numbers tell us how many packets have actually traversed the IPSec tunnel.   
+Data Packets are now traversing the link securely via IPSec as shown by below output, they are being encrypted and decrypted. The #pkts encaps/encrypt/decap/decrypt, these numbers tell us how many packets have actually traversed the IPSec tunnel.   
 {{< bokya src="img/l2lR1_2.jpg" >}}  
   
 The crypto session will give us a list of all IKE and IPSec SA Sessions  
