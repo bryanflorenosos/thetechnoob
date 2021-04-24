@@ -44,7 +44,7 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 `Interface Gi0/0`   
  `crypto map CMAP`   
 
-## R1
+## R2
 **1.** Phase I - ISAKMP Parameters  
 `crypto isakmp policy 5`  
  `authentication pre-share`  
