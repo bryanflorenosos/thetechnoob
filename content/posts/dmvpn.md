@@ -25,15 +25,29 @@ Basically a vrf is a separate routing table from your global routing table. The 
 * The clients (Spoke sites) query the NHS router (Hub site) to obtain the physical WAN public IP of other Spoke routers.
 * As long as this Spoke router will register its current public IP with the NHS server, all the other Spoke sites will find it and will be able to establish VPN with the dynamic IP site. This functionality is facilitated by NHRP.  
   
-**DMVPN Phase I**  
+**DMVPN Phase II**    
+- The Control Plane (Routing Traffic) is all phases is generally setup based on Hub - n - Spoke with the NHS being the Hub.  
+- In Phase I, the Data Plane traffic is also forwarded in a Hub - n - Spoke manner where the NHS is the Data Plane Hub.  
+- The reason behind it is that the NHS changes the Next Hop address of the LAN Segments to itself before forwarding it from spoke to spoke.  
+- DMVPN Phase I is the default Phase for EIGRP as the Routing Protocol.  
+  
+**DMVPN Phase II**  
 - The Control Plane (Routing Traffic) is all phases is generally setup based on Hub - n - Spoke with the NHS being the Hub.  
 - In Phase II, the Data Plane traffic is forwarded directly between the spokes.  
 - This is accomplished by tweaking the Routing protocol.  
 - You need to configure the NHS NOT to change the Next Hop of the routes that it propagates from Spoke - to - Spoke.  
 - This configuration is done on the NHS.  
-
-
-
+  
+**DMVPN Phase III**  
+- The Control Plane (Routing Traffic) is all phases is generally setup based on Hub - n - Spoke with the NHS being the Hub.  
+- In Phase II, the Data Plane traffic is forwarded directly between the spokes.  
+- This is accomplished by tweaking the NHRP.  
+- You need to configure the NHS NOT to change the Next Hop of the routes that it propagates from Spoke - to - Spoke.  
+- This configuration is done on the NHS.  
+- The main advantage of Phase III over Phase II is that it directly creates a Mapping between the LAN Segment and the Public IP. This eliminates a Dual check.  
+- It also allows the Hub to perform Route Summarization for all the Spoke routes reducing the size of the Spoke Routing table.  
+  
+    
 ###### Configuration of the Cloud Router  
 The cloud router simulates the Internet the configuration only involves putting in the Public IP address nothing fancy.
 
