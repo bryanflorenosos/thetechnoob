@@ -26,7 +26,7 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
  `hash sha256`  
  `group 14`  
 !  
-`crypto isakmp key cisco123 address 139.30.20.2`  
+`crypto isakmp key cisco123 address 129.30.19.2`    
   
 **2.** Phase II - ESP Parameters  
 `crypto ipsec transform-set TSET esp-aes 256 esp-sha-hmac`  
@@ -40,7 +40,7 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 **4.** Link the above parameters to each other. This is done by using a Crypto Map Component  
 `crypto map CMAP 10 ipsec-isakmp`  
  `match address 101`  
- `set peer 139.30.20.2`  
+ `set peer 129.30.19.2`  
  `set transform-set TSET`  
    
 **5.** Apply the Crypto Map on the outgoing Interface  
@@ -55,7 +55,7 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
  `hash sha256`  
  `group 14`  
 !  
-`crypto isakmp key cisco123 address 129.30.19.2`  
+`crypto isakmp key cisco123 address 139.30.20.2`  
   
 **2.** Phase II - ESP Parameters  
 `crypto ipsec transform-set TSET esp-aes 256 esp-sha-hmac`  
@@ -69,7 +69,7 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 **4.** Link the above parameters to each other. This is done by using a Crypto Map Component  
 `crypto map CMAP 10 ipsec-isakmp`  
  `match address 101`  
- `set peer 129.30.19.2`  
+ `set peer 139.30.20.2`  
  `set transform-set TSET`  
    
 **5.** Apply the Crypto Map on the outgoing Interface  
