@@ -28,16 +28,16 @@ Phase 1 is only concerned in protecting the VPN tunnel session. The protocol tha
 Two modes can be used to define this phase 1 tunnel namely:  
 
 **Main mode.**  
-* **a.** Main mode uses more packets and as a result, processing power more than the aggressive mode. Six different messages (three pair of messages) are exchanged between negotiating peers in main mode:
-* **b.** First pair consists of IKEv1 security policies configure on device. One of the peer (initiator) starts sending one or more IKEv1 policies, and the other peer (responder) responds with its choice from the policies.
-* **c.** Second pair includes DH public key exchange. DH creates a shared key as per DH group being exchanged in first pair and then encrypts a random number, which is then exchanged between VPN peers.
-* **d.** Third pair is used for ISAKMP authentication. Each pair authenticates their validity by using either pre-shared key or digital certificate.  
+**a.** Main mode uses more packets and as a result, processing power more than the aggressive mode. Six different messages (three pair of messages) are exchanged between negotiating peers in main mode:  
+**b.** First pair consists of IKEv1 security policies configure on device. One of the peer (initiator) starts sending one or more IKEv1 policies, and the other peer (responder) responds with its choice from the policies.  
+**c.** Second pair includes DH public key exchange. DH creates a shared key as per DH group being exchanged in first pair and then encrypts a random number, which is then exchanged between VPN peers.  
+**d.** Third pair is used for ISAKMP authentication. Each pair authenticates their validity by using either pre-shared key or digital certificate.  
 
 **Aggressive mode.**   
-* **a.** Main goal of aggressive mode is same as main mode. Instead of six, this type for IKE phase 1 tunnel negotiation uses three messages. The overall process involves following steps:
-* **b.** The initiator sends randomly generated number being signed by DH group, IKEv1 policies and so on.
-* **c.** The other peer (responder) authenticates the packet and sends back accepted IKEv1 policies, nonces (the randomly generate number signed by DH group) and identification hash so that exchange gets complete.
-* **d.** The initiator authenticates the receiving packets and sends identification hash to the responder.
+**a.** Main goal of aggressive mode is same as main mode. Instead of six, this type for IKE phase 1 tunnel negotiation uses three messages. The overall process involves following steps:  
+**b.** The initiator sends randomly generated number being signed by DH group, IKEv1 policies and so on.  
+**c.** The other peer (responder) authenticates the packet and sends back accepted IKEv1 policies, nonces (the randomly generate number signed by DH group) and identification hash so that exchange gets complete.  
+**d.** The initiator authenticates the receiving packets and sends identification hash to the responder.  
 
 
 Below reference are recommended from Cisco, It should be kept in mind that these protocols are not used for data encryption/protection. It is for protecting key negotiation process before the start of VPN process.  
