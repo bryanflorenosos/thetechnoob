@@ -33,6 +33,9 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
   
 **3.** Interesting Traffic - Crypto ACL  
 `access-list 101 permit ip 10.10.1.0 0.0.0.255 172.168.1.0 0.0.0.255`  
+`access-list 101 permit ip 10.10.1.0 0.0.0.255 172.168.2.0 0.0.0.255`  
+`access-list 101 permit ip 10.10.2.0 0.0.0.255 172.168.1.0 0.0.0.255`  
+`access-list 101 permit ip 10.10.2.0 0.0.0.255 172.168.2.0 0.0.0.255`  
   
 **4.** Link the above parameters to each other. This is done by using a Crypto Map Component  
 `crypto map CMAP 10 ipsec-isakmp`  
@@ -59,6 +62,9 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
   
 **3.** Interesting Traffic - Crypto ACL  
 `access-list 101 permit ip 172.168.1.0 0.0.0.255 10.10.1.0 0.0.0.255`  
+`access-list 101 permit ip 172.168.1.0 0.0.0.255 10.10.2.0 0.0.0.255`  
+`access-list 101 permit ip 172.168.2.0 0.0.0.255 10.10.1.0 0.0.0.255`  
+`access-list 101 permit ip 172.168.2.0 0.0.0.255 10.10.2.0 0.0.0.255`  
   
 **4.** Link the above parameters to each other. This is done by using a Crypto Map Component  
 `crypto map CMAP 10 ipsec-isakmp`  
