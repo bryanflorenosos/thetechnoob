@@ -23,7 +23,7 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 `crypto isakmp policy 5`  
  `authentication pre-share`  
  `encryption aes 256`  
- `hash sha-256`  
+ `hash sha256`  
  `group 14`  
 !  
 `crypto isakmp key cisco123 address 139.30.20.2`  
@@ -52,7 +52,7 @@ In this example I will be configuring a Policy based site to site vpn tunnel. Th
 `crypto isakmp policy 5`  
  `authentication pre-share`  
  `encryption aes 256`  
- `hash sha-256`  
+ `hash sha256`  
  `group 14`  
 !  
 `crypto isakmp key cisco123 address 129.30.19.2`  
