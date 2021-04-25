@@ -50,8 +50,18 @@ should never be used on any of these ports.
 `show interface trunk`  
   
 **Task 3**  
-Configure VLANs 10 and 20 on all switches and use the default IOS VLAN names. Explicitly configure switch Switch1 with a priority of 8192 so it is elected root for both of these VLANs. Additionally, also explicitly configure switch Switch2 so it is elected
-backup root for both VLANs.  
+Configure VLANs 10 and 20 on all switches and use the default IOS VLAN names. Explicitly configure Switch1 with a priority of 8192 so it is elected root for both of these VLANs. Additionally, also explicitly configure switch Switch2 so it is elected as a backup root for both VLANs.  
+**Switch1:**  
+`vlan 10`  
+`vlan 20`  
+`spanning-tree vlan 10 prior 8192`  
+`spanning-tree vlan 20 prior 8192`  
+**Switch2:**  
+`vlan 10`  
+`vlan 20`  
+`spanning-tree vlan 10 prior 16384`  
+`spanning-tree vlan 20 prior 16384`  
+
 
 **Task 4**  
 Configure Spanning Tree so that it will remain root bridge in the event that another switch is inadvertently misconfigured with a lower priority for VLANs 10 and 20. Test and verify your configuration by specifying a priority of 0 for VLAN 100 on any of these ports.  
