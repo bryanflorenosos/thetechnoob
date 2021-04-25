@@ -54,13 +54,33 @@ Configure VLANs 10 and 20 on all switches and use the default IOS VLAN names. Ex
 **Switch1:**  
 `vlan 10`  
 `vlan 20`  
+`exit`  
 `spanning-tree vlan 10 prior 8192`  
 `spanning-tree vlan 20 prior 8192`  
+To verify: `show spanning-tree root`  
+{{< bokya src="img/switching/switch1showspanningroot.jpg" >}}    
+*the image above shows that the switch itself is the root the Root ID is the Burn in Address (bia) of the switch1 interface:*    
+{{< bokya src="img/switching/switch1bia.jpg" >}}    
+  
 **Switch2:**  
 `vlan 10`  
 `vlan 20`  
+`exit`  
 `spanning-tree vlan 10 prior 16384`  
 `spanning-tree vlan 20 prior 16384`  
+To verify: `show spanning-tree root`  
+{{< bokya src="img/switching/switch2showspanningroot.jpg" >}}  
+*switch2 knows that the root switch is Switch1 indicated by the root id which shows the bia address of switch1*  
+  
+**Switch3:**  
+`vlan 10`  
+`vlan 20`  
+`exit`  
+**Switch4:**  
+`vlan 10`  
+`vlan 20`  
+`exit`  
+
 
 
 **Task 4**  
