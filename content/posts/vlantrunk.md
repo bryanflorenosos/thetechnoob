@@ -49,4 +49,20 @@ should never be used on any of these ports.
 **Verification Command:**  
 `show interface trunk`  
   
+**Task 3**  
+Configure VLANs 10 and 20 on all switches and use the default IOS VLAN names. Explicitly configure switch Switch1 with a priority of 8192 so it is elected root for both of these VLANs. Additionally, also explicitly configure switch Switch2 so it is elected
+backup root for both VLANs.  
 
+**Task 4**  
+Configure Spanning Tree so that it will remain root bridge in the event that another switch is inadvertently misconfigured with a lower priority for VLANs 10 and 20. Test and verify your configuration by specifying a priority of 0 for VLAN 100 on any of these ports.  
+
+
+**Task 5**  
+Configure the trunk links on switch Switch2 so that they will be disabled automatically in the event that they do not receive BPDUs. Test and verify your configuration by disabling default BPDU transmission from one of the upstream switches.  
+
+**Task 6**  
+Ports Gi0/3 through Gi0/7 on switches Switch3 and Switch4 will be connected to hosts in the future. These hosts will reside in VLAN 10. Using only **TWO** commands, perform the following activities on these ports:  
+**a.** Assign all of these individual ports to VLAN 10  
+**b.** Configure the ports as static access port  
+**c.** Enable PortFast for all the ports  
+**d.** Disable bundling, i.e. EtherChannel, for these ports  
