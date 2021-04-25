@@ -98,6 +98,29 @@ Configure Spanning Tree so that it will remain root bridge in the event that ano
 Following this, enable the root guard feature on all designated ports using the spanningtree
 guard root interface configuration command. Referencing the list above, root guard
 would be enabled on the following interfaces or ports:  
+**a.** Switc1: gi0/0, gi0/1, gi0/2  
+**b.**Switch2: gi0/0  
+**c.**Switch3: gi0/0, gi0/2 
+**d.**Switch4: None - because this switch has no designated ports  
+This task is completed by enabling root guard on the ports above as follows:  
+**Switch1:**  
+`int range g0/0 - 2`  
+`spanning-tree guard root`  
+**Switch2:**  
+`int range g0/0`  
+`spanning-tree guard root`  
+**Switch3:**  
+`int range g0/0 - 2`  
+`spanning-tree guard root`  
+  
+Test your solution by setting the priority of a VLAN to 0 or 4096 and then verifying the port state on the adjacent segment designated bridge. For example, if you changed the priority of VLAN 10 on Switch4 to 0, all peer ports enabled for root guard with which this switch connects will be placed into a root inconsistent state as follows:  
+**Switch4**  
+`spanning-tree vlan 10 priority 0`  
+Output from **Switch1:**  
+*Apr 25 03:50:54.615: %SPANTREE-2-ROOTGUARD_BLOCK: Root guard blocking port GigabitEthernet0/2 on VLAN0010.  
+  
+Aside from the logged message, you can also use the show spanning-tree inconsistentports and the show spanning-tree interface commands to view root inconsistent ports:  
+{{< bokya src="img/switching/switch1inconsistent.jpg" >}}  
 
 
 
