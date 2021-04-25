@@ -157,7 +157,7 @@ Ports Gi0/3 and g1/0 - 3 on switches Switch3 and Switch4 will be connected to ho
 `int range g0/3, g1/0 - 3`  
 `switchport access vlan 10`  
 `switchport host`  
-*The* `switchport host` *command is an inbuilt Cisco IOS macro that performs three actions under the specified port(s):*
+*The* `switchport host` *command is an inbuilt Cisco IOS macro that performs three actions under the specified port(s):*  
 **a** It configures the switchport for access mode  
 **b** It enables portfast  
 **c** It disables Etherchannel capabilities for the port  
