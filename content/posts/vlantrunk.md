@@ -17,9 +17,14 @@ This Lab will be a good guide on understanding the basics behind the configurati
 **Task 1**  
 We will disable all VTP modes on all switches. All switches should support the configuration,
 modification and deletion of VLANs.  
-* Commands to put in **all switches**:  
+* Commandd to put in **all switches**:  
 `configure terminal`  
 `vtp mode transparent`  
   
+
+**Task 2**  
+Configure trunking on the switches so that all ports are explicitly trunking and DTP
+should never be used on any of these ports.  
+
 
 
