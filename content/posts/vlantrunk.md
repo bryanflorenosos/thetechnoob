@@ -94,6 +94,11 @@ Configure Spanning Tree so that it will remain root bridge in the event that ano
 {{< bokya src="img/switching/vlan10_switch3.jpg" >}}  
 **From Switch4:**  
 {{< bokya src="img/switching/vlan10_switch4.jpg" >}}  
+  
+Following this, enable the root guard feature on all designated ports using the spanningtree
+guard root interface configuration command. Referencing the list above, root guard
+would be enabled on the following interfaces or ports:  
+
 
 
 ## Task 5   
