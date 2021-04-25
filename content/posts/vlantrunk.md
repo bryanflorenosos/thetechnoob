@@ -85,9 +85,8 @@ To verify: `show spanning-tree root`
   
 ## Task 4  
 Configure Spanning Tree so that it will remain root bridge in the event that another switch is inadvertently misconfigured with a lower priority for VLANs 10 and 20. Test and verify your configuration by specifying a priority of 0 for VLAN 10 on any of these ports.  
-> This task requires identifying designated ports and configuring the root guard feature on them. The root guard feature prevents a designated port from becoming a root port. If a port on which the root guard feature receives a superior BPDU, it moves the port
-into a root-inconsistent state, thus maintaining the current root bridge status.  
-> First do a verification for each vlan as such: `show spanning-tree vlan 10`  
+> **a.** This task requires identifying designated ports and configuring the root guard feature on them. The root guard feature prevents a designated port from becoming a root port. If a port on which the root guard feature receives a superior BPDU, it moves the port into a root-inconsistent state, thus maintaining the current root bridge status.  
+> **b** First do a verification for each vlan as such: `show spanning-tree vlan 10`  
 
 
 ## Task 5   
