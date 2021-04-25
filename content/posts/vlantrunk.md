@@ -46,3 +46,7 @@ should never be used on any of these ports.
  `switchport trunk encapsulation dot1q`  
  `switchport mode trunk`  
  `switchport nonegotiate`  
+**Verification Command:**  
+`show interface trunk`  
+  
+
