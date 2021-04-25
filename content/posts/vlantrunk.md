@@ -125,7 +125,18 @@ Aside from the logged message, you can also use the show spanning-tree inconsist
 
 
 ## Task 5   
-Configure the trunk links on switch Switch2 so that they will be disabled automatically in the event that they do not receive BPDUs. Test and verify your configuration by disabling default BPDU transmission from one of the upstream switches.  
+Configure the trunk links on  Switch2 so that they will be disabled automatically in the event that they do not receive BPDUs. Test and verify your configuration by disabling default BPDU transmission from one of the upstream switches.  
+*This task requires the configuration of Loop Guard on switch2. The Loop Guard detects root ports and blocked ports, and ensures they continue to receive BPDUs. When enabled, should one of these ports stop receiving BPDUs, it is moved into a loop inconsistent state.*  
+**Switch 2**  
+`interface range g0/0 - 2`  
+`spanning-tree guard loop`  
+**Switch 1**  
+`int g0/0`  
+`spanning-tree bpdufilter enable`  
+Switch2 logs:  
+%SPANTREE-2-LOOPGUARD_BLOCK: Loop guard blocking port  
+
+
 
 ## Task 6  
 Ports Gi0/3 through Gi0/7 on switches Switch3 and Switch4 will be connected to hosts in the future. These hosts will reside in VLAN 10. Using only **TWO** commands, perform the following activities on these ports:  
