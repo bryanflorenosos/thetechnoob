@@ -153,7 +153,7 @@ Ports Gi0/3 and g1/0 - 3 on switches Switch3 and Switch4 will be connected to ho
 **b.** Configure the ports as static access port  
 **c.** Enable PortFast for all the ports  
 **d.** Disable bundling, i.e. EtherChannel, for these ports  
-**Switch3 and Switch4 Configuration:**
+**Switch3 and Switch4 Configuration:**  
 `int range g0/3, g1/0 - 3`  
 `switchport access vlan 10`  
 `switchport host`  
