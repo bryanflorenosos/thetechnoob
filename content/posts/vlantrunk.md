@@ -26,5 +26,23 @@ modification and deletion of VLANs.
 Configure trunking on the switches so that all ports are explicitly trunking and DTP
 should never be used on any of these ports.  
 
-
-
+**Switch1:**  
+ `interface range g0/0 - 2`  
+ `switchport trunk encapsulation dot1q`  
+ `switchport mode trunk`  
+ `switchport nonegotiate`  
+**Switch2:**  
+ `interface range g0/0 - 2`  
+ `switchport trunk encapsulation dot1q`  
+ `switchport mode trunk`  
+ `switchport nonegotiate`  
+ **Switch3:**  
+ `interface range g0/0 - 2`  
+ `switchport trunk encapsulation dot1q`  
+ `switchport mode trunk`  
+ `switchport nonegotiate`  
+ **Switch4:**  
+ `interface range g0/0 - 2`  
+ `switchport trunk encapsulation dot1q`  
+ `switchport mode trunk`  
+ `switchport nonegotiate`  
