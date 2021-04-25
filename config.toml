@@ -109,7 +109,7 @@ url = "https://www.linkedin.com/in/bryandefeoflorenosos/"
 languageName = ":uk:"
 
 [[languages.en.menu.main]]
-name = "Technical Notes"
+name = "Network and Security"
 weight = 1
 url = "posts/"
 
