@@ -99,9 +99,9 @@ Following this, enable the root guard feature on all designated ports using the 
 guard root interface configuration command. Referencing the list above, root guard
 would be enabled on the following interfaces or ports:  
 **a.** Switc1: gi0/0, gi0/1, gi0/2  
-**b.**Switch2: gi0/1, g0/2    
-**c.**Switch3: gi0/0  
-**d.**Switch4: None - because this switch has no designated ports  
+**b.** Switch2: gi0/1, g0/2    
+**c.** Switch3: gi0/0  
+**d.** Switch4: None - because this switch has no designated ports  
 This task is completed by enabling root guard on the ports above as follows:  
 **Switch1:**  
 `int range g0/0 - 2`  
@@ -164,5 +164,7 @@ Ports Gi0/3 and g1/0 - 3 on switches Switch3 and Switch4 will be connected to ho
 {{< bokya src="img/switching/swhost.jpg" >}}  
 Another verification command that I always used is the `show interface (number) switchport` it will show the output as below. The highlighted are the information that I always checked first.
 {{< bokya src="img/switching/swaccess.jpg" >}}  
+
+
 
 
