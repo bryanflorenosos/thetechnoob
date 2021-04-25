@@ -90,6 +90,10 @@ Configure Spanning Tree so that it will remain root bridge in the event that ano
 {{< bokya src="img/switching/vlan10_1.jpg" >}}  
 **From Switch2:**  
 {{< bokya src="img/switching/vlan10_switch2.jpg" >}}  
+**From Switch3:**  
+{{< bokya src="img/switching/vlan10_switch3.jpg" >}}  
+**From Switch4:**  
+{{< bokya src="img/switching/vlan10_switch4.jpg" >}}  
 
 
 ## Task 5   
