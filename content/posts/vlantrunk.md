@@ -162,6 +162,7 @@ Ports Gi0/3 and g1/0 - 3 on switches Switch3 and Switch4 will be connected to ho
 **b** It enables portfast  
 **c** It disables Etherchannel capabilities for the port  
 {{< bokya src="img/switching/swhost.jpg" >}}  
+  
 Another verification command that I always used is the `show interface (number) switchport` it will show the output as below. The highlighted are the information that I always checked first.
 {{< bokya src="img/switching/swaccess.jpg" >}}  
 
