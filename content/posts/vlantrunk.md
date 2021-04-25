@@ -13,7 +13,7 @@ This Lab will be a good guide on understanding the basics behind the configurati
 
 ### The Network Topology:  
 {{< bokya src="img/switching/switchtopology1.jpg" >}}
-
+  
 **Task 1**  
 We will disable all VTP modes on all switches. All switches should support the configuration,
 modification and deletion of VLANs.  
