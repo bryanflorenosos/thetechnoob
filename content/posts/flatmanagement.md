@@ -16,7 +16,7 @@ banner motd ^C
  This is a company private property. If you have accessed this facility by     
  mistake, please disconnect immediately. Unauthorized access to this system  
  may subject you to disciplinary action and criminal prosecution.  
-****************************** WARNING!!! ********************************** 
+****************************** WARNING!!! **********************************   
 ^C  
 !  
 !  
