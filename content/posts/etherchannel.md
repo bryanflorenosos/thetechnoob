@@ -118,21 +118,21 @@ establish an EtherChannel.The EtherChannels should be configured as follows:
 **Task 3**  
 Following the EtherChannel configuration, protect the switched network from any future misconfigurations by ensuring misconfigured EtherChannels are automatically disabled. Additionally, configure the switches to automatically bring up EtherChannels that were
 disabled due to misconfigurations after 10 minutes.  
-`Switch1(config)#spanning-tree etherchannel guard misconfig`  
-`Switch1(config)#errdisable recovery cause channel-misconfig`  
-`Switch1(config)#errdisable recovery interval 600`  
-  
-`Switch2(config)#spanning-tree etherchannel guard misconfig`  
-`Switch2(config)#errdisable recovery cause channel-misconfig`  
-`Switch2(config)#errdisable recovery interval 600`  
-  
-`Switch3(config)#spanning-tree etherchannel guard misconfig`  
-`Switch3(config)#errdisable recovery cause channel-misconfig`  
-`Switch3(config)#errdisable recovery interval 600`  
-  
-`Switch4(config)#spanning-tree etherchannel guard misconfig`  
-`Switch4(config)#errdisable recovery cause channel-misconfig`  
-`Switch4(config)#errdisable recovery interval 600`  
+Switch1(config)#spanning-tree etherchannel guard misconfig  
+Switch1(config)#errdisable recovery cause channel-misconfig  
+Switch1(config)#errdisable recovery interval 600  
+*************************************************************    
+Switch2(config)#spanning-tree etherchannel guard misconfig  
+Switch2(config)#errdisable recovery cause channel-misconfig  
+Switch2(config)#errdisable recovery interval 600  
+*************************************************************    
+Switch3(config)#spanning-tree etherchannel guard misconfig  
+Switch3(config)#errdisable recovery cause channel-misconfig  
+Switch3(config)#errdisable recovery interval 600`  
+*************************************************************    
+Switch4(config)#spanning-tree etherchannel guard misconfig  
+Switch4(config)#errdisable recovery cause channel-misconfig  
+Switch4(config)#errdisable recovery interval 600  
 Verfication:  
 {{< bokya src="img/switching/eth1.jpg" >}}  
 {{< bokya src="img/switching/eth2.jpg" >}}  
