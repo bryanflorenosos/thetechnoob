@@ -48,17 +48,17 @@ establish an EtherChannel.The EtherChannels should be configured as follows:
 `interface range GigabitEthernet0/2 - 3`  
  `description to Switch3 LACP PO2`  
  `switchport trunk encapsulation dot1q`
- `switchport mode trunk`
- `media-type rj45`
- `negotiation auto`
+ `switchport mode trunk`  
+ `media-type rj45`  
+ `negotiation auto`  
  `channel-group 2 mode active`  
  **Switch3:**  
 `interface range GigabitEthernet0/2 - 3`  
  `description to Switch1 LACP PO2`  
  `switchport trunk encapsulation dot1q`
- `switchport mode trunk`
- `media-type rj45`
- `negotiation auto`
+ `switchport mode trunk`  
+ `media-type rj45`  
+ `negotiation auto`  
  `channel-group 2 mode passive`  
   
 **C**  
@@ -88,7 +88,7 @@ establish an EtherChannel.The EtherChannels should be configured as follows:
  `media-type rj45`  
  `negotiation auto`  
  `channel-group 4 mode active`  
-**Switch3:**
+**Switch3:**  
 `interface range GigabitEthernet1/0 - 1`  
  `description to Switch2 LACP PO4`  
  `switchport trunk encapsulation dot1q`  
