@@ -25,4 +25,20 @@ Click Generate
 Click the generated certificate which is Internal-CA  
 Check the forward Trust Certificate  
 {{< bokya src="img/forwardtrust.jpg" >}}  
-The forward trust tells the firewall, anytime a certificate presented by a webserver for an outbound connection use this cerficate (lab-internal-ca) to proxy that particular certificate, basically the firewall would present itself to the inside client.  
+The forward trust tells the firewall, anytime a certificate is presented by a webserver for an outbound connection use this cerficate (lab-internal-ca) to proxy that particular certificate, basically the firewall would present itself to the inside client.  
+
+**Step 3**
+Go to Objects > Decryption Profile  
+Click Add  
+Name: SSL-Proxy-Decryption-Profile  
+{{< bokya src="img/dercyptionprofile.jpg" >}}  
+
+**Step 4**  
+Go to Policies > Decryption  
+Click Add  
+Name: Decrypt
+Important parameters are:  
+Action = Decrypt  
+Type = ssl-forward-proxy  
+Decryption profile = SSL-Proxy-Decryption-Profile  
+{{< bokya src="img/ecryption.jpg" >}}  d
