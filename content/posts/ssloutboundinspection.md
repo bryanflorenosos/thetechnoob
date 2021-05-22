@@ -14,7 +14,7 @@ Self-signed Certificates—The firewall can act as a CA and generate self-signed
 **Step 1**  
 Login to the Palo Alto Firewall:  
 Device > Certificate Management > Certificate > Click Generate  
-Certificate name: Internal-CA  
+Certificate name: lab-internal-ca    
 Common Name: 172.31.20 -> this is the ip of the trust interface  
 Check: Certificate Authority  
 Click Generate  
@@ -41,4 +41,7 @@ Important parameters are:
 Action = Decrypt  
 Type = ssl-forward-proxy  
 Decryption profile = SSL-Proxy-Decryption-Profile  
-{{< bokya src="img/ecryption.jpg" >}}  d
+{{< bokya src="img/ecryption.jpg" >}}  
+
+
+After doing the above steps go back to Certificates, check the certificate that is the Self Signed Certifcate from the firewall (lab-internal-ca) then click export, then no need to export private, and then click ok. Save the file then install to the client machine.  
