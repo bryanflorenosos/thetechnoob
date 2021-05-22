@@ -24,5 +24,5 @@ Click Generate
 **Step 2**  
 Click the generated certificate which is Internal-CA  
 Check the forward Trust Certificate  
-{{< bokya src="img/orwardtrust.jpg" >}}  
+{{< bokya src="img/forwardtrust.jpg" >}}  
 The forward trust tells the firewall, anytime a certificate presented by a webserver for an outbound connection use this cerficate (lab-internal-ca) to proxy that particular certificate, basically the firewall would present itself to the inside client.  
