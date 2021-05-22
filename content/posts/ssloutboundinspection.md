@@ -44,4 +44,4 @@ Decryption profile = SSL-Proxy-Decryption-Profile
 {{< bokya src="img/decryption.jpg" >}}  
 
 
-After doing the above steps go back to Certificates, check the certificate that is the Self Signed Certifcate from the firewall (lab-internal-ca) then click export, then no need to export private, and then click ok. Save the file then install to the client machine.  
+After doing the above steps go back to Certificates, check the certificate that is the Self Signed Certifcate from the firewall (lab-internal-ca) then click export, then no need to export privatekey, and then click ok. Save the file then install to the client machine.  
